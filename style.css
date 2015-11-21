@@ -1,11 +1,20 @@
-body{
-    min-width: 1500px;
+body {
+	background-color: grey;
+	margin:auto;
 }
+#page{
+	width: 1024px;
+	min-height: 800px;
+	background: white;
+	margin: auto;
+	border: 1px solid;
+}
+
 
 .dummy {
 	position: fixed !important;
-	left: 600px;
-	top: 100px;
+	left: 50%;
+	top: 250px;
 	height: 100px;
 	width: 400px;
 	background: white;
@@ -17,7 +26,7 @@ body{
 }
 
 .dummy2 {
-	margin-top: 250px;
+	top: 430px;
 	width: 100px;
 	border-radius: 50%;
 }
@@ -85,9 +94,10 @@ body{
 }
 
 .bottomContainer {
+	width: 400px;
     position: fixed;
-    top: 600px;
-	left: 600px;
+    top: 700px;
+	left: 50%;
 	font-size: 1.5em;
 }
 
