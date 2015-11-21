@@ -1,0 +1,95 @@
+body{
+    min-width: 1500px;
+}
+
+.dummy {
+	position: fixed !important;
+	left: 600px;
+	top: 100px;
+	height: 100px;
+	width: 400px;
+	background: white;
+	border-radius: 10px;
+}
+
+.dummy1 {
+
+}
+
+.dummy2 {
+	margin-top: 250px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+
+.slider {
+    width:300px;
+}
+
+.slider > * {
+    margin-right: 2px;
+
+}
+.slider::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.slider label {
+    float:left;
+    width: 70px;
+}
+
+.slider [type="range"] {
+    float:left;
+    width: 150px;
+}
+
+.slider [type="text"] {
+    float:left;
+    width: 70px;
+}
+
+.sliders-container::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.sliders-container{
+    padding:5px 5px 5px 0;
+}
+
+.resetBtn {
+    margin:20px -10px 0;
+    transform:rotateZ(90deg);
+}
+
+.onOff {
+	font-size: 33px;
+	color: green;
+	margin-top: -140px;
+	margin-left: 310px;
+	text-shadow: 3px 3px 10px grey;
+	transition: all 0.5s;
+}
+
+.onOff:hover {
+	cursor: pointer;
+	color: rgb(0, 175, 0);
+}
+
+.onOff.pressed {
+	color: grey! important;
+	text-shadow: 1px 1px 5px grey;
+}
+
+.bottomContainer {
+    position: fixed;
+    top: 600px;
+	left: 600px;
+	font-size: 1.5em;
+}
+
+
+

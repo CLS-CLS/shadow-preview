@@ -1,0 +1,41 @@
+<div class="sliders-container">
+    <div style="float:left" style="width:10px;">
+        <button type="button" class="btn btn-primary resetBtn" ng-click="reset()">Reset</button>
+    </div>
+    <div style="float:left">
+        <div class="slider">
+            <label class="form-control"> Horiz </label>
+            <input class="form-control" id="{{id + 'X'}}" ng-model="attrs.x" type="range" min="-100" max="100"/>
+            <input class="form-control" ng-model="attrs.x" type="text" size="3"/>
+        </div>
+        <div class="slider">
+            <label class="form-control"> Vert </label>
+            <input class="form-control" id="{{id+ 'Y'}}" ng-model="attrs.y" type="range" min="-100" max="100"/>
+            <input class="form-control" ng-model="attrs.y" type="text" size="3"/>
+        </div>
+        <div class="slider">
+            <label class="form-control"> Blur </label>
+            <input class="form-control" id="{{id+ 'Blur'}}" ng-model="attrs.blur" type="range" min="0" max="200"/>
+            <input class="form-control" ng-model="attrs.blur" type="text" size="3"/>
+        </div>
+        <div class="slider">
+            <label class="form-control"> Spread </label>
+            <input class="form-control" id="{{id+ 'Spread'}}" ng-model="attrs.spread" type="range" min="-100"
+                   max="100"/>
+            <input class="form-control" ng-model="attrs.spread" type="text" size="3"/>
+        </div>
+        <div class="slider">
+            <input colorpicker="rgba" class="form-control" id="{{id+'Color'}}" style="width:200px"
+                   ng-model="attrs.color" placeholder="Color" type="text"/>
+            <label><input ng-model="attrs.inset" type="checkbox" style="width: 25px; height: 25px;"/>Inset</label>
+        </div>
+        <label class="onOff" ng-click="toggleDisable()" ng-class="{pressed: attrs.disabled}">
+            <span class="fa fa-power-off"></span>
+        </label>
+    </div>
+</div>
+
+
+<!--
+    style="margin-top:-80px; margin-left:-93px; transform:rotateZ(90deg);"
+-->

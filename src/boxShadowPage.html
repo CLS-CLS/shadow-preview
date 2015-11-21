@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down #3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="ang-colorpicker/colorpicker.css"/>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="sliderController">
+    <div>
+        <div class="dummy dummy1" style="{{boxShadowStyle}};"></div>
+        <div class="dummy dummy2" style="{{boxShadowStyle}};"></div>
+    </div>
+    <div class="bottomContainer">
+        {{boxShadowStyle}}
+    </div>
+
+    <div>
+        <div ng-repeat="s in shadows">
+            <div>
+                <div>
+                    <boxslider id="{{'box' + $index}}" box-shadow="s"></boxslider>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <button type="button" class="btn btn-danger" ng-click="removeShadow($index)"
+                            style="margin-top:-100px; margin-left:-11; transform:rotateZ(90deg);width:65px; height: 33px;">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <input class="btn btn-default" type="button" value="Add Shadow" ng-click="addShadow()"/>
+            <input class="btn btn-default" type="button" value="Copy css" ng-click="copy()"/>
+        </div>
+    </div>
+</div>
+
+<script src="ang-colorpicker/bootstrap-colorpicker-module.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
